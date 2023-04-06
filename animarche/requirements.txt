@@ -3,6 +3,7 @@ djangorestframework==3.14.0
 numpy==1.23.5
 PyJWT==2.6.0
 pymongo==4.3.3
+python-decouple==3.8
 python_bcrypt==0.3.2
 selenium==4.8.3
 tensorflow==2.12.0
