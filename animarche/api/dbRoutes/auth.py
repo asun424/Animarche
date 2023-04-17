@@ -32,6 +32,7 @@ class Auth(APIView):
             user = self.checkUser(user_collection, request.data)
             if user.get("_id") == None:
                 del user["method"]
+                user["favoritedItems"] = []
                 newlyRegisteredUser = user_collection.insert_one(user)
                 #inserted objects are not subscriptable, so you have to use . rather than [] for access
                 print(newlyRegisteredUser.inserted_id)

@@ -13,4 +13,5 @@ class Scrape(APIView):
         urls = createUrls(query, collection)
         with concurrent.futures.ThreadPoolExecutor() as executor: 
             executor.map(getCollection, urls)
+        print(collection)
         return Response(collection)
